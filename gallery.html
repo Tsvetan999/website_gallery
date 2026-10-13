@@ -180,7 +180,6 @@
             right: 0;
         }
 
-        /* Sleek arrow icons that appear/highlight nicely inside the zones on hover */
         .lb-prev::after,
         .lb-next::after {
             content: '';
@@ -326,11 +325,9 @@
                 item.className = 'lg-item';
 
                 const image = document.createElement('img');
-                
                 const rawSrc = imgData.src || imgData.img || '';
-                const cleanSrc = imgData.src || imgData.img || '';
-                image.src = encodeURI(cleanSrc);
                 
+                image.src = encodeURI(rawSrc);
                 image.alt = imgData.alt || '';
                 image.loading = 'lazy';
 
@@ -361,9 +358,9 @@
             currentIndex = index;
             resetTransform();
             const img = images[currentIndex];
-            const cleanLightboxSrc = img.img || img.src || '';
+            const rawLightboxSrc = img.img || img.src || '';
             
-            lbImage.src = encodeURI(cleanLightboxSrc);
+            lbImage.src = encodeURI(rawLightboxSrc);
             lbImage.alt = img.alt || '';
             lbCaption.innerHTML = img.alt ? `<h4>${img.alt}</h4>` : '';
             lightbox.hidden = false;
@@ -454,7 +451,6 @@
         }
 
         lbImage.addEventListener('touchstart', (e) => {
-            // Double-tap recognition
             const currentTime = new Date().getTime();
             const tapLength = currentTime - lastTapTime;
             if (e.touches.length === 1 && tapLength < 300 && tapLength > 0) {
