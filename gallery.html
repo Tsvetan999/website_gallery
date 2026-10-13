@@ -285,7 +285,7 @@
         let lastTapTime = 0;
 
         // Fetch gallery data
-        fetch(`/data/${galleryId}.json`)
+        fetch(`data/${galleryId}.json`)
             .then(response => {
                 if (!response.ok) throw new Error('Галерията не е намерена');
                 return response.json();
