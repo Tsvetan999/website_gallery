@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tsvetan Vasilev Photography</title>
+
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #f8f9fa;
+            color: #1a1a1a;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 2000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            color: #666;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        /* Section/Gallery Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Individual Gallery Card */
+        .card {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-image-wrapper {
+            position: relative;
+            width: 100%;
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .card-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-image-wrapper img {
+            transform: scale(1.05);
+        }
+
+        .card-info {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-info h2 {
+            font-size: 1.25rem;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .card-info span {
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Цветан Василев Фотография</h1>
+            <p>Избрани Фотографии и Галерии</p>
+        </header>
+
+        <div class="portfolio-grid">
+            <!-- Gallery 1 -->
+            <a href="gallery.html?id=weddings" class="card">
+                <div class="card-image-wrapper">
+                    <img src="img/weddings/lightbox/01_13.06.26_Сватба 109.webp" alt="Sunsets">
+                </div>
+                <div class="card-info">
+                    <h2>Сватбена Фотография</h2>
+                    <span>Към Галерията →</span>
+                </div>
+            </a>
+
+            <!-- Gallery 2 -->
+            <a href="/gallery-vacation" class="card">
+                <div class="card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600" alt="Vacations">
+                </div>
+                <div class="card-info">
+                    <h2>Vacations</h2>
+                    <span>View Gallery →</span>
+                </div>
+            </a>
+
+            <!-- Gallery 3 -->
+            <a href="/gallery-portraits" class="card">
+                <div class="card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600" alt="Portraits">
+                </div>
+                <div class="card-info">
+                    <h2>Portraits</h2>
+                    <span>View Gallery →</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
