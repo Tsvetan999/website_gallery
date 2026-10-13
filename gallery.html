@@ -328,7 +328,7 @@
                 const image = document.createElement('img');
                 
                 const rawSrc = imgData.src || imgData.img || '';
-                const cleanSrc = rawSrc.startsWith('/') ? rawSrc : '/' + rawSrc;
+                const cleanSrc = imgData.src || imgData.img || '';
                 image.src = encodeURI(cleanSrc);
                 
                 image.alt = imgData.alt || '';
@@ -361,8 +361,7 @@
             currentIndex = index;
             resetTransform();
             const img = images[currentIndex];
-            const rawLightboxSrc = img.img || img.src || '';
-            const cleanLightboxSrc = rawLightboxSrc.startsWith('/') ? rawLightboxSrc : '/' + rawLightboxSrc;
+            const cleanLightboxSrc = img.img || img.src || '';
             
             lbImage.src = encodeURI(cleanLightboxSrc);
             lbImage.alt = img.alt || '';
